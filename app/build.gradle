@@ -99,10 +99,6 @@ publishing {
             groupId = 'com.github.tiny-computer'
             artifactId = 'termux-x11'
             version = '1.03.01'
-
-            afterEvaluate {
-                from components.release
-            }
         }
     }
 }
