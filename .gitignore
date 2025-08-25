@@ -6,6 +6,7 @@
 build/
 *.apk
 *.so
+!app/src/main/jniLibs/arm64-v8a/libXlorie.so
 .externalNativeBuild
 
 # Crashlytics configuations
