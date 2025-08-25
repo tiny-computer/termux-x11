@@ -24,7 +24,9 @@ jobs:
         java-version: '17'
 
     - name: Build arm64 library
-      run: ./gradlew externalNativeBuildRelease -Pandroid.abis=arm64-v8a -PcmakeBuildType=MinSizeRel
+      run: |
+        ./gradlew externalNativeBuildRelease -Pandroid.abis=arm64-v8a -PcmakeBuildType=MinSizeRel
+        find app/build -name "libXlorie.so" -path "*/arm64-v8a/*" -exec strip --strip-debug {} \;
 
     - name: List build directories for debugging
       run: |
