@@ -68,7 +68,7 @@ jobs:
         find build -name "*.so" -o -name "*.a" | xargs ls -la
     
     - name: Archive built libraries
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: android-libraries
         path: |
