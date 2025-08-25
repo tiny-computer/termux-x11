@@ -26,7 +26,14 @@ jobs:
     - name: Build arm64 library
       run: |
         ./gradlew externalNativeBuildRelease -Pandroid.abis=arm64-v8a -PcmakeBuildType=MinSizeRel
-        find app/build -name "libXlorie.so" -path "*/arm64-v8a/*" -exec strip --strip-debug {} \;
+        env
+        NDK_STRIP="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip"
+        if [ -f "$NDK_STRIP" ]; then
+            find app/build -name "libXlorie.so" -path "*/arm64-v8a/*" -exec $NDK_STRIP --strip-debug {} \;
+        else
+            echo "NDK strip tool not found, using system strip"
+            find app/build -name "libXlorie.so" -path "*/arm64-v8a/*" -exec strip --strip-debug {} \; || echo "Strip failed, continuing without stripping"
+        fi
 
     - name: List build directories for debugging
       run: |
