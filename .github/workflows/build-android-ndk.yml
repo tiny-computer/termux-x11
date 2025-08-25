@@ -3,7 +3,7 @@ name: Build arm64 NDK library
 on:
   push:
     branches:
-      - master
+      - xlorie
 
 jobs:
   build:
@@ -13,6 +13,7 @@ jobs:
     - name: Clone repository
       uses: actions/checkout@v4
       with:
+        ref: xlorie
         submodules: recursive
         fetch-depth: 1
 
