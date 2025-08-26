@@ -60,6 +60,8 @@ afterEvaluate {
     }
 
     tasks.register("generatePrefs") {
+        outputs.upToDateWhen { false } // 强制每次运行
+        
         //noinspection UnnecessaryQualifiedReference
         def xml = groovy.xml.DOMBuilder.parse((new StringReader(file('src/main/res/xml/preferences.xml').text)))
         def preferenceNodes = xml.documentElement.getElementsByTagName("*")
