@@ -85,7 +85,7 @@
     <string name="pref_filterOutWinkey">过滤掉被拦截的 Win (Meta/Mod4) 键。</string>
     <string name="pref_filterOutWinkey_summary">允许您在拦截时使用 Dex 快捷键。需要辅助功能服务才能工作。</string>
     <string name="pref_enforceCharBasedInput">强制执行基于字符的输入</string>
-    <string name="pref_enforceCharBasedInput_summary">禁止建议、预测性输入和 CJK 语言</string>
+    <string name="pref_enforceCharBasedInput_summary">禁止建议、预测性输入和中日韩语言</string>
 
     <string name="pref_clipboardEnable">剪贴板共享</string>
     <string name="pref_requestNotificationPermission">请求通知权限</string>

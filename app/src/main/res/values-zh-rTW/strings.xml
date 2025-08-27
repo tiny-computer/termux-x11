@@ -85,7 +85,7 @@
     <string name="pref_filterOutWinkey">篩選掉被攔截的 Win (Meta/Mod4) 鍵。</string>
     <string name="pref_filterOutWinkey_summary">允許您在攔截時使用 Dex 快速鍵。需要協助工具服務才能運作。</string>
     <string name="pref_enforceCharBasedInput">強制執行基於字元的輸入</string>
-    <string name="pref_enforceCharBasedInput_summary">抑制建議、預測性輸入和 CJK 語言</string>
+    <string name="pref_enforceCharBasedInput_summary">抑制建議、預測性輸入和中日韓語言</string>
 
     <string name="pref_clipboardEnable">剪貼簿共用</string>
     <string name="pref_requestNotificationPermission">要求通知權限</string>
