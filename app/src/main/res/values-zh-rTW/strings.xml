@@ -48,7 +48,7 @@
     <string name="pref_fullscreen">全螢幕</string>
     <string name="pref_fullscreen_summary">在您的裝置顯示器上切換沉浸式模式</string>
     <string name="pref_forceOrientation">螢幕方向</string>
-    <string name="pref_hideCutout">隱藏顯示切口（如有）</string>
+    <string name="pref_hideCutout">在異形螢幕上全螢幕顯示</string>
     <string name="pref_keepScreenOn">保持螢幕常亮</string>
 
     <string name="pref_touchMode">觸控螢幕輸入模式</string>
@@ -77,13 +77,13 @@
     <string name="pref_hardwareKbdScancodesWorkaround_summary">修正某些裝置上的掃描碼。可能會導致多個配置出現問題。</string>
     <string name="pref_dexMetaKeyCapture">攔截系統快速鍵</string>
     <string name="pref_dexMetaKeyCapture_summary">僅限三星 Dex。允許攔截「Alt+F4」、「Meta+D」、「Meta+E」等。</string>
-    <string name="pref_enableAccessibilityService">手動啟用協助工具服務以攔截系統快速鍵。</string>
-    <string name="pref_enableAccessibilityService_summary">開啟協助工具設定。</string>
-    <string name="pref_enableAccessibilityServiceAutomatically">自動啟用協助工具服務以攔截系統快速鍵。</string>
+    <string name="pref_enableAccessibilityService">手動啟用無障礙服務以攔截系統快速鍵。</string>
+    <string name="pref_enableAccessibilityService_summary">開啟無障礙設定。</string>
+    <string name="pref_enableAccessibilityServiceAutomatically">自動啟用無障礙服務以攔截系統快速鍵。</string>
     <string name="pref_enableAccessibilityServiceAutomatically_summary">需要 WRITE_SECURE_SETTINGS 權限。</string>
     <string name="pref_pauseKeyInterceptingWithEsc">使用 Esc 鍵暫停按鍵攔截</string>
     <string name="pref_filterOutWinkey">篩選掉被攔截的 Win (Meta/Mod4) 鍵。</string>
-    <string name="pref_filterOutWinkey_summary">允許您在攔截時使用 Dex 快速鍵。需要協助工具服務才能運作。</string>
+    <string name="pref_filterOutWinkey_summary">允許您在攔截時使用 Dex 快速鍵。需要無障礙服務才能運作。</string>
     <string name="pref_enforceCharBasedInput">強制執行基於字元的輸入</string>
     <string name="pref_enforceCharBasedInput_summary">抑制建議、預測性輸入和中日韓語言</string>
 
@@ -112,6 +112,6 @@
     <string name="pref_mediaKeysAction">媒體鍵</string>
 
     <string name="pref_summary_requiresExactOrCustom">需要將「顯示解析度模式」設定為「exact」或「custom」</string>
-    <string name="pref_summary_requiresIntercepting">需要使用 Dex 模式或協助工具服務攔截系統快速鍵</string>
+    <string name="pref_summary_requiresIntercepting">需要使用 Dex 模式或無障礙服務攔截系統快速鍵</string>
     <string name="pref_summary_requiresTrackpadAndNative">需要將「觸控螢幕輸入模式」設定為「觸控板」且「顯示解析度模式」不為「原生」</string>
 </resources>
