@@ -15,29 +15,22 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme"
-            android:taskAffinity=".MainActivity"
-            android:launchMode="singleInstance"
             android:supportsPictureInPicture="true"
             android:configChanges="fontScale|orientation|screenSize|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|screenLayout|touchscreen|uiMode|smallestScreenSize|density"
             android:resizeableActivity="true"
             android:windowSoftInputMode="stateHidden"
             android:exported="true">
-            <intent-filter>
-                <category android:name="android.intent.category.SECONDARY_HOME" />
-            </intent-filter>
+            <!-- android:taskAffinity=".MainActivity" -->
+            <!-- android:launchMode="singleInstance" -->
         </activity>
         <activity
             android:theme="@style/Theme.AppCompat.DayNight"
             android:excludeFromRecents="true"
             android:name=".LoriePreferences"
-            android:taskAffinity=".LoriePreferences"
             android:supportsPictureInPicture="false"
             android:resizeableActivity="true"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
+            <!-- android:taskAffinity=".LoriePreferences" -->
         </activity>
 	    <meta-data android:name="com.samsung.android.multidisplay.keep_process_alive" android:value="false"/>
 	    <meta-data android:name="android.allow_multiple_resumed_activities" android:value="true" />
@@ -61,7 +54,4 @@
             </intent-filter>
         </receiver>
     </application>
-    <queries>
-        <package android:name="com.termux" />
-    </queries>
 </manifest>
