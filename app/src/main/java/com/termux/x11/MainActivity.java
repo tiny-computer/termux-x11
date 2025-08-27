@@ -71,6 +71,8 @@ import com.termux.x11.utils.X11ToolbarViewPager;
 
 import java.util.Map;
 
+import me.weishu.reflection.Reflection;
+
 @SuppressLint("ApplySharedPref")
 @SuppressWarnings({"deprecation", "unused"})
 public class MainActivity extends AppCompatActivity {
@@ -151,6 +153,8 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint({"AppCompatMethod", "ObsoleteSdkInt", "ClickableViewAccessibility", "WrongConstant", "UnspecifiedRegisterReceiverFlag"})
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        Reflection.unseal(this);
 
         prefs = new Prefs(this);
         int modeValue = Integer.parseInt(prefs.touchMode.get()) - 1;

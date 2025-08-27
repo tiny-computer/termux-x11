@@ -45,6 +45,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.2.0"
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.1'
     implementation 'androidx.preference:preference:1.2.1'
+    implementation 'com.github.tiann:FreeReflection:3.2.2'
     compileOnly project(':shell-loader:stub')
 }
 

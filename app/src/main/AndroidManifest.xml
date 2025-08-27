@@ -14,6 +14,7 @@
         tools:ignore="DataExtractionRules,GoogleAppIndexingWarning">
         <activity
             android:name=".MainActivity"
+            android:theme="@style/AppTheme"
             android:taskAffinity=".MainActivity"
             android:launchMode="singleInstance"
             android:supportsPictureInPicture="true"

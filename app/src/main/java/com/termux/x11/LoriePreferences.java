@@ -77,6 +77,8 @@ import java.util.Set;
 import java.util.function.Consumer;
 import java.util.regex.PatternSyntaxException;
 
+import me.weishu.reflection.Reflection;
+
 @SuppressWarnings("deprecation")
 public class LoriePreferences extends AppCompatActivity implements PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
     static final String ACTION_PREFERENCES_CHANGED = "com.termux.x11.ACTION_PREFERENCES_CHANGED";
@@ -124,6 +126,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Reflection.unseal(this);
         prefs = new Prefs(this);
         getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new LoriePreferenceFragment(null)).commit();
 
