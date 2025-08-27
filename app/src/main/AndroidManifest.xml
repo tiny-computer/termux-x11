@@ -19,7 +19,8 @@
             android:configChanges="fontScale|orientation|screenSize|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|screenLayout|touchscreen|uiMode|smallestScreenSize|density"
             android:resizeableActivity="true"
             android:windowSoftInputMode="stateHidden"
-            android:exported="true">
+            android:exported="true"
+            android:process=":x11">
             <!-- android:taskAffinity=".MainActivity" -->
             <!-- android:launchMode="singleInstance" -->
         </activity>
@@ -29,7 +30,8 @@
             android:name=".LoriePreferences"
             android:supportsPictureInPicture="false"
             android:resizeableActivity="true"
-            android:exported="true">
+            android:exported="true"
+            android:process=":x11">
             <!-- android:taskAffinity=".LoriePreferences" -->
         </activity>
 	    <meta-data android:name="com.samsung.android.multidisplay.keep_process_alive" android:value="false"/>
