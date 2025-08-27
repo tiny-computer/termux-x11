@@ -41,10 +41,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.EditTextPreference;
 import androidx.preference.PreferenceDataStore;
 import androidx.preference.PreferenceFragmentCompat;
 
 import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SeekBarPreference;
 
@@ -76,8 +78,6 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.function.Consumer;
 import java.util.regex.PatternSyntaxException;
-
-import me.weishu.reflection.Reflection;
 
 @SuppressWarnings("deprecation")
 public class LoriePreferences extends AppCompatActivity implements PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
@@ -126,7 +126,6 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Reflection.unseal(this);
         prefs = new Prefs(this);
         getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new LoriePreferenceFragment(null)).commit();
 
@@ -191,23 +190,6 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
 
     public static class LoriePreferenceFragment extends PreferenceFragmentCompat implements OnPreferenceChangeListener {
         private final Runnable updateLayout = this::updatePreferencesLayout;
-        private static final Method onSetInitialValue;
-        static {
-            try {
-                //noinspection JavaReflectionMemberAccess
-                onSetInitialValue = Preference.class.getMethod("onSetInitialValue", boolean.class, Object.class);
-            } catch (NoSuchMethodException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
-        void onSetInitialValue(Preference p) {
-            try {
-                onSetInitialValue.invoke(p, false, null);
-            } catch (IllegalAccessException | InvocationTargetException e) {
-                throw new RuntimeException(e);
-            }
-        }
 
         final String root;
         /** @noinspection unused*/ // Used by `androidx.fragment.app.Fragment.instantiate`...
@@ -327,10 +309,19 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
             if (getContext() == null)
                 return;
 
-            for (String key : prefs.keys.keySet()) {
-                Preference p = findPreference(key);
-                if (p != null)
-                    onSetInitialValue(p);
+            for (PrefsProto.Preference prefInfo : prefs.keys.values()) {
+                Preference p = findPreference(prefInfo.key);
+                if (p == null) continue;
+
+                if (p instanceof ListPreference) {
+                    ((ListPreference) p).setValue(prefs.getString(prefInfo.key, (String) prefInfo.defValue));
+                } else if (p instanceof SwitchPreferenceCompat) {
+                    ((SwitchPreferenceCompat) p).setChecked(prefs.getBoolean(prefInfo.key, (Boolean) prefInfo.defValue));
+                } else if (p instanceof EditTextPreference) {
+                    ((EditTextPreference) p).setText(prefs.getString(prefInfo.key, (String) prefInfo.defValue));
+                } else if (p instanceof SeekBarPreference) {
+                    ((SeekBarPreference) p).setValue(prefs.getInt(prefInfo.key, (Integer) prefInfo.defValue));
+                }
             }
 
             String displayResMode = prefs.displayResolutionMode.get();
