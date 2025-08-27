@@ -15,7 +15,7 @@
 #include "linux/input-event-codes.h"
 #include "buffer.h"
 
-#define PORT 7892
+#define PORT 7897
 #define MAGIC "0xDEADBEEF"
 
 struct lorie_shared_server_state;

@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     protected ICmdEntryInterface service = null;
     public TermuxX11ExtraKeys mExtraKeys;
     private Notification mNotification;
-    private final int mNotificationId = 7892;
+    private final int mNotificationId = 7897;
     NotificationManager mNotificationManager;
     static InputMethodManager inputMethodManager;
     private static boolean showIMEWhileExternalConnected = true;
