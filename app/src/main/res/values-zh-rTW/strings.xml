@@ -113,5 +113,5 @@
 
     <string name="pref_summary_requiresExactOrCustom">需要將「顯示解析度模式」設定為「exact」或「custom」</string>
     <string name="pref_summary_requiresIntercepting">需要使用 Dex 模式或無障礙服務攔截系統快速鍵</string>
-    <string name="pref_summary_requiresTrackpadAndNative">需要將「觸控螢幕輸入模式」設定為「觸控板」且「顯示解析度模式」不為「原生」</string>
+    <string name="pref_summary_requiresTrackpadAndNative">需要將「觸控螢幕輸入模式」設定為「Trackpad」且「顯示解析度模式」不為「native」</string>
 </resources>
