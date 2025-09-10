@@ -10,7 +10,7 @@
     <string name="preferences_button_text">   偏好設定   </string>
     <string name="help_button_text">   說明   </string>
     <string name="exit_button_text">   離開   </string>
-    <string name="extra_keys_config_desc">您可以在此處設定額外按鍵變數的值，就像在 Termux 應用程式中一樣（請閱讀<a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">此內容</a>）等等 \n
+    <string name="extra_keys_config_desc">您可以在此處設定小鍵盤變數的值，就像在 Termux 應用程式中一樣（請閱讀<a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">此內容</a>）等等 \n
 例如<b>META</b> 代表 <i>META 鍵</i>, \n
 <b>KEYBOARD</b> 代表 <i>軟鍵盤切換鍵</i>, \n
 <b>PREFERENCES</b> 代表 <i>偏好設定開啟鍵</i>, \n
@@ -22,7 +22,7 @@
     <string name="notification_exit">離開</string>
     <string name="notification_restart_activity">重新啟動</string>
     <string name="notification_toggle_soft_keyboard">切換輸入法</string>
-    <string name="notification_toggle_additional_key_bar">切換附加鍵盤</string>
+    <string name="notification_toggle_additional_key_bar">切換小鍵盤</string>
     <string name="notification_release_pointer_and_keyboard_capture">釋放擷取</string>
     <string name="notification_toggle_fullscreen">切換全螢幕</string>
 
@@ -32,7 +32,7 @@
     <string name="pref_kbd">鍵盤</string>
     <string name="pref_other">其他</string>
     <string name="pref_version">版本</string>
-    <string name="pref_ekbar">額外按鍵列偏好設定</string>
+    <string name="pref_ekbar">小鍵盤列偏好設定</string>
     <string name="pref_userActions">對使用者動作的回應</string>
 
     <string name="pref_displayResolutionMode">顯示解析度模式</string>
@@ -67,8 +67,8 @@
     <string name="pref_capturedPointerSpeedFactor">擷取的指標速度因子, %</string>
     <string name="pref_tapToMove">為觸控板啟用點擊移動</string>
 
-    <string name="pref_showAdditionalKbd">顯示附加鍵盤</string>
-    <string name="pref_showAdditionalKbd_summary">顯示附有額外按鍵的鍵盤。</string>
+    <string name="pref_showAdditionalKbd">顯示小鍵盤</string>
+    <string name="pref_showAdditionalKbd_summary">顯示附有小按鍵的鍵盤。</string>
     <string name="pref_showIMEWhileExternalConnected">連接外部鍵盤時顯示輸入法</string>
     <string name="pref_showIMEWhileExternalConnected_summary">連接硬體鍵盤時顯示軟體鍵盤。</string>
     <string name="pref_preferScancodes">盡可能偏好掃描碼</string>
@@ -94,12 +94,12 @@
     <string name="pref_storeSecondaryDisplayPreferencesSeparately">單獨儲存輔助顯示器的偏好設定</string>
     <string name="pref_storeSecondaryDisplayPreferencesSeparately_summary">在要設定的顯示器上開啟此畫面</string>
 
-    <string name="pref_adjustHeightForEK">為額外按鍵列調整顯示高度</string>
-    <string name="pref_adjustHeightForEK_summary">切換額外按鍵列時可能會導致螢幕閃爍。</string>
-    <string name="pref_useTermuxEKBarBehaviour">每次按鍵後停用附加按鍵列上的特殊按鍵</string>
+    <string name="pref_adjustHeightForEK">為小鍵盤列調整顯示高度</string>
+    <string name="pref_adjustHeightForEK_summary">切換小鍵盤列時可能會導致螢幕閃爍。</string>
+    <string name="pref_useTermuxEKBarBehaviour">每次按鍵後停用小鍵盤列上的特殊按鍵</string>
     <string name="pref_useTermuxEKBarBehaviour_summary">使用長按鎖定特殊按鍵</string>
-    <string name="pref_opacityEKBar">額外按鍵列的不透明度, %</string>
-    <string name="pref_extra_keys_config">額外按鍵設定</string>
+    <string name="pref_opacityEKBar">小鍵盤列的不透明度, %</string>
+    <string name="pref_extra_keys_config">小鍵盤設定</string>
 
     <string name="pref_swipeUpAction">三指向上滑動</string>
     <string name="pref_swipeDownAction">三指向下滑動</string>
