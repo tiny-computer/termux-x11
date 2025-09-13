@@ -443,7 +443,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
             requireContext().sendBroadcast(new Intent(ACTION_PREFERENCES_CHANGED) {{
                 putExtra("key", key);
                 putExtra("fromBroadcast", true);
-                setPackage("com.termux.x11");
+                setPackage(requireContext().getPackageName());
             }});
 
             return true;
@@ -564,6 +564,10 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                                 edit.putString(key, newValue);
                                 break;
                             }
+                            case "tc_displayScale": {
+                                edit.putInt("displayScale", Math.round( Float.parseFloat(newValue) * (float) p.displayScale.get()));
+                                break;
+                            }
                             default: {
                                 PrefsProto.Preference pref = p.keys.get(key);
                                 if (pref != null && pref.type == boolean.class) {
@@ -603,7 +607,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                         Intent intent0 = new Intent(ACTION_PREFERENCES_CHANGED);
                         intent0.putExtra("key", key);
                         intent0.putExtra("fromBroadcast", true);
-                        intent0.setPackage("com.termux.x11");
+                        intent0.setPackage(context.getPackageName());
                         context.sendBroadcast(intent0);
                     }
                     edit.commit();
