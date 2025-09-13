@@ -134,6 +134,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         IntentFilter filter = new IntentFilter(ACTION_PREFERENCES_CHANGED);
+        Log.e("Preferences", "changed preference: 22");
         registerReceiver(receiver, filter, SDK_INT >= Build.VERSION_CODES.TIRAMISU ? RECEIVER_NOT_EXPORTED : 0);
         prefs = new Prefs(this);
         getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new LoriePreferenceFragment(null)).commit();
@@ -613,12 +614,15 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                                 }
                             }
                         }
+                        Log.e("Preferences", "changed preference: 31");
 
                         Intent intent0 = new Intent(ACTION_PREFERENCES_CHANGED);
                         intent0.putExtra("key", key);
+                        Log.e("Preferences", "changed preference: " + key);
                         intent0.putExtra("fromBroadcast", true);
                         intent0.setPackage(context.getPackageName());
                         context.sendBroadcast(intent0);
+                        Log.e("Preferences", "changed preference: " + context.getPackageName());
                     }
                     edit.commit();
                 }
