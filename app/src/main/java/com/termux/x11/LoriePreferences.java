@@ -88,9 +88,12 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
         @SuppressLint("UnspecifiedRegisterReceiverFlag")
         @Override
         public void onReceive(Context context, Intent intent) {
+            Log.e("Preferences", "changed preference: 1");
             if (ACTION_PREFERENCES_CHANGED.equals(intent.getAction()) &&
-                    intent.getBooleanExtra("fromBroadcast", false))
+                    intent.getBooleanExtra("fromBroadcast", false)) {
                 updatePreferencesLayout();
+                Log.e("Preferences", "changed preference: 2");
+                    }
         }
     };
 
@@ -117,9 +120,13 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
     }
 
     private void updatePreferencesLayout() {
+        Log.e("Preferences", "changed preference: 3");
         getSupportFragmentManager().getFragments().forEach(fragment -> {
-            if (fragment instanceof LoriePreferenceFragment)
+            Log.e("Preferences", "changed preference: 4");
+            if (fragment instanceof LoriePreferenceFragment) {
+            Log.e("Preferences", "changed preference: 5");
                 ((LoriePreferenceFragment) fragment).updatePreferencesLayout();
+            }
         });
     }
 
@@ -306,12 +313,16 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
 
         @SuppressWarnings("ConstantConditions")
         void updatePreferencesLayout() {
+            Log.e("Preferences", "changed preference: 6");
             if (getContext() == null)
                 return;
+                Log.e("Preferences", "changed preference: 7");
 
             for (PrefsProto.Preference prefInfo : prefs.keys.values()) {
                 Preference p = findPreference(prefInfo.key);
+                Log.e("Preferences", "changed preference: 9");
                 if (p == null) continue;
+                Log.e("Preferences", "changed preference: 10");
 
                 if (p instanceof ListPreference) {
                     ((ListPreference) p).setValue(prefs.getString(prefInfo.key, (String) prefInfo.defValue));
@@ -320,6 +331,8 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                 } else if (p instanceof EditTextPreference) {
                     ((EditTextPreference) p).setText(prefs.getString(prefInfo.key, (String) prefInfo.defValue));
                 } else if (p instanceof SeekBarPreference) {
+                    
+            Log.e("Preferences", "changed preference: 8");
                     ((SeekBarPreference) p).setValue(prefs.getInt(prefInfo.key, (Integer) prefInfo.defValue));
                 }
             }
@@ -348,6 +361,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                     Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
                     && ContextCompat.checkSelfPermission(requireContext(), POST_NOTIFICATIONS) == PERMISSION_DENIED;
             setVisible("requestNotificationPermission", requestNotificationPermissionVisible);
+            Log.e("Preferences", "changed preference: 11");
         }
 
         /** @noinspection SameParameterValue*/
