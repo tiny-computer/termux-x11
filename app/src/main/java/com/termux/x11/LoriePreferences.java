@@ -132,6 +132,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.e("Preferences", "changed preference: m2");
         super.onCreate(savedInstanceState);
         IntentFilter filter = new IntentFilter(ACTION_PREFERENCES_CHANGED);
         Log.e("Preferences", "changed preference: 22");
