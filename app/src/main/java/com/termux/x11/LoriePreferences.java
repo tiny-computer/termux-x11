@@ -82,7 +82,7 @@ import java.util.regex.PatternSyntaxException;
 @SuppressWarnings("deprecation")
 public class LoriePreferences extends AppCompatActivity implements PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
     static final String ACTION_PREFERENCES_CHANGED = "com.termux.x11.ACTION_PREFERENCES_CHANGED";
-    private static Prefs prefs = null;
+    private Prefs prefs = null;
 
     private final BroadcastReceiver receiver = new BroadcastReceiver() {
         @SuppressLint("UnspecifiedRegisterReceiverFlag")
@@ -138,6 +138,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
         Log.e("Preferences", "changed preference: 22");
         registerReceiver(receiver, filter, SDK_INT >= Build.VERSION_CODES.TIRAMISU ? RECEIVER_NOT_EXPORTED : 0);
         prefs = new Prefs(this);
+        prefs.recheckStoringSecondaryDisplayPreferences();
         getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new LoriePreferenceFragment(null)).commit();
 
         ActionBar actionBar = getSupportActionBar();
