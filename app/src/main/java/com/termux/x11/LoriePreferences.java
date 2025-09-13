@@ -126,6 +126,8 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        IntentFilter filter = new IntentFilter(ACTION_PREFERENCES_CHANGED);
+        registerReceiver(receiver, filter, SDK_INT >= Build.VERSION_CODES.TIRAMISU ? RECEIVER_NOT_EXPORTED : 0);
         prefs = new Prefs(this);
         getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new LoriePreferenceFragment(null)).commit();
 
@@ -146,13 +148,11 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
     @Override
     protected void onResume() {
         super.onResume();
-        IntentFilter filter = new IntentFilter(ACTION_PREFERENCES_CHANGED);
-        registerReceiver(receiver, filter, SDK_INT >= Build.VERSION_CODES.TIRAMISU ? RECEIVER_NOT_EXPORTED : 0);
     }
 
     @Override
-    protected void onPause() {
-        super.onPause();
+    protected void onDestroy() {
+        super.onDestroy();
         unregisterReceiver(receiver);
     }
 
