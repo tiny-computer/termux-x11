@@ -670,7 +670,7 @@ public class MainActivity extends AppCompatActivity {
                 (TermuxX11ExtraKeys.getExtraKeysInfo() == null ? 0 : TermuxX11ExtraKeys.getExtraKeysInfo().getMatrix().length));
         pager.setLayoutParams(layoutParams);
 
-        frm.setPadding(0, 0, 0, prefs.adjustHeightForEK.get() && showNow ? layoutParams.height : 0);
+        getLorieView().setContentInsets(0, 0, 0, prefs.adjustHeightForEK.get() && showNow ? layoutParams.height : 0);
         getLorieView().requestFocus();
     }
 
@@ -699,7 +699,7 @@ public class MainActivity extends AppCompatActivity {
         NotificationCompat.Builder builder =  new NotificationCompat.Builder(this, getNotificationChannel(mNotificationManager))
                 .setContentTitle("Termux:X11")
                 .setSmallIcon(R.drawable.ic_x11_icon)
-                .setContentText(getResources().getText(R.string.notification_content_text))
+                .setContentText(getResources().getText(R.string.lorie_notification_content_text))
                 .setOngoing(true)
                 .setPriority(Notification.PRIORITY_MAX)
                 .setSilent(true)
