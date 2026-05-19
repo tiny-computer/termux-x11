@@ -7,7 +7,7 @@ android {
     compileSdkVersion 34
     defaultConfig {
         minSdkVersion 26
-        targetSdkVersion 34
+        targetSdkVersion 37
         versionCode 15
         def commit= 'git rev-parse --verify --short HEAD'.execute().text.trim()
         def version = "1.03.01"
@@ -27,8 +27,7 @@ android {
     compileOptions.targetCompatibility JavaVersion.VERSION_1_9
     externalNativeBuild.cmake {
         path "src/main/cpp/CMakeLists.txt"
-        arguments "-DCMAKE_C_FLAGS_RELWITHDEBINFO=-O2 -DNDEBUG",
-                  "-DCMAKE_CXX_FLAGS_RELWITHDEBINFO=-O2 -DNDEBUG"
+        arguments "-DCMAKE_BUILD_TYPE=Release"
     }
     packagingOptions.jniLibs.useLegacyPackaging false
     buildFeatures.aidl true
