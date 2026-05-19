@@ -3,7 +3,7 @@ name: Build arm64 NDK library
 on:
   push:
     branches:
-      - xlorie
+      - master
 
 jobs:
   build:
