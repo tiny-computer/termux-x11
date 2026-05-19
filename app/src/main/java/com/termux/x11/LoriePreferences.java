@@ -36,15 +36,19 @@ import android.os.Looper;
 import android.os.ParcelFileDescriptor;
 import android.os.RemoteException;
 import android.preference.PreferenceManager;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.EditTextPreference;
 import androidx.preference.PreferenceDataStore;
 import androidx.preference.PreferenceFragmentCompat;
 
 import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SeekBarPreference;
 
@@ -127,6 +131,19 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
         prefs = new Prefs(this);
         getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new LoriePreferenceFragment(null)).commit();
 
+        // Handle system window insets to prevent content from being blocked by navigation bar
+        findViewById(android.R.id.content).post(() -> {
+            ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content), (v, insets) -> {
+                v.setPadding(
+                    insets.getSystemWindowInsetLeft(),
+                    insets.getSystemWindowInsetTop(),
+                    insets.getSystemWindowInsetRight(),
+                    insets.getSystemWindowInsetBottom()
+                );
+                return WindowInsetsCompat.CONSUMED;
+            });
+        });
+
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
@@ -191,8 +208,8 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
         private static final Method onSetInitialValue;
         static {
             try {
-                //noinspection JavaReflectionMemberAccess
-                onSetInitialValue = Preference.class.getMethod("onSetInitialValue", boolean.class, Object.class);
+                onSetInitialValue = Preference.class.getDeclaredMethod("onSetInitialValue", boolean.class, Object.class);
+                onSetInitialValue.setAccessible(true);
             } catch (NoSuchMethodException e) {
                 throw new RuntimeException(e);
             }
@@ -233,7 +250,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
         @SuppressLint("DiscouragedApi")
         int findId(String name) {
             //noinspection DataFlowIssue
-            return getResources().getIdentifier("pref_" + name, "string", getContext().getPackageName());
+            return getResources().getIdentifier("lorie_pref_" + name, "string", getContext().getPackageName());
         }
 
         /** @noinspection DataFlowIssue*/
@@ -272,10 +289,10 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
             with("showAdditionalKbd", p -> p.setLayoutResource(R.layout.preference));
             with("version", p -> p.setSummary(BuildConfig.VERSION_NAME));
 
-            setSummary("displayStretch", R.string.pref_summary_requiresExactOrCustom);
-            setSummary("adjustResolution", R.string.pref_summary_requiresExactOrCustom);
-            setSummary("pauseKeyInterceptingWithEsc", R.string.pref_summary_requiresIntercepting);
-            setSummary("scaleTouchpad", R.string.pref_summary_requiresTrackpadAndNative);
+            setSummary("displayStretch", R.string.lorie_pref_summary_requiresExactOrCustom);
+            setSummary("adjustResolution", R.string.lorie_pref_summary_requiresExactOrCustom);
+            setSummary("pauseKeyInterceptingWithEsc", R.string.lorie_pref_summary_requiresIntercepting);
+            setSummary("scaleTouchpad", R.string.lorie_pref_summary_requiresTrackpadAndNative);
 
             if (!SamsungDexUtils.available())
                 setVisible("dexMetaKeyCapture", false);
@@ -324,10 +341,19 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
             if (getContext() == null)
                 return;
 
-            for (String key : prefs.keys.keySet()) {
-                Preference p = findPreference(key);
-                if (p != null)
-                    onSetInitialValue(p);
+            for (PrefsProto.Preference prefInfo : prefs.keys.values()) {
+                Preference p = findPreference(prefInfo.key);
+                if (p == null) continue;
+
+                if (p instanceof ListPreference) {
+                    ((ListPreference) p).setValue(prefs.getString(prefInfo.key, (String) prefInfo.defValue));
+                } else if (p instanceof SwitchPreferenceCompat) {
+                    ((SwitchPreferenceCompat) p).setChecked(prefs.getBoolean(prefInfo.key, (Boolean) prefInfo.defValue));
+                } else if (p instanceof EditTextPreference) {
+                    ((EditTextPreference) p).setText(prefs.getString(prefInfo.key, (String) prefInfo.defValue));
+                } else if (p instanceof SeekBarPreference) {
+                    ((SeekBarPreference) p).setValue(prefs.getInt(prefInfo.key, (Integer) prefInfo.defValue));
+                }
             }
 
             String displayResMode = prefs.displayResolutionMode.get();
@@ -449,7 +475,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
             requireContext().sendBroadcast(new Intent(ACTION_PREFERENCES_CHANGED) {{
                 putExtra("key", key);
                 putExtra("fromBroadcast", true);
-                setPackage("com.termux.x11");
+                setPackage(requireContext().getPackageName());
             }});
 
             return true;
@@ -570,6 +596,10 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                                 edit.putString(key, newValue);
                                 break;
                             }
+                            case "tc_displayScale": {
+                                edit.putInt("displayScale", Math.round( Float.parseFloat(newValue) * (float) p.displayScale.get()));
+                                break;
+                            }
                             default: {
                                 PrefsProto.Preference pref = p.keys.get(key);
                                 if (pref != null && pref.type == boolean.class) {
@@ -609,7 +639,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                         Intent intent0 = new Intent(ACTION_PREFERENCES_CHANGED);
                         intent0.putExtra("key", key);
                         intent0.putExtra("fromBroadcast", true);
-                        intent0.setPackage("com.termux.x11");
+                        intent0.setPackage(context.getPackageName());
                         context.sendBroadcast(intent0);
                     }
                     edit.commit();
@@ -815,7 +845,8 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
 
             private String[] getArrayItems(int resourceId, Resources resources) {
                 ArrayList<String> itemList = new ArrayList<>();
-                try(TypedArray typedArray = resources.obtainTypedArray(resourceId)) {
+                TypedArray typedArray = resources.obtainTypedArray(resourceId);
+                try {
                     for (int i = 0; i < typedArray.length(); i++) {
                         int type = typedArray.getType(i);
                         if (type == TypedValue.TYPE_STRING) {
@@ -825,10 +856,10 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                             itemList.addAll(Arrays.asList(resources.getStringArray(resIdOfArray)));
                         }
                     }
+                } finally {
+                    typedArray.recycle();
                 }
-
-                Object[] objectArray = itemList.toArray();
-                return Arrays.copyOf(objectArray, objectArray.length, String[].class);
+                return itemList.toArray(new String[0]);
             }
 
         }
