@@ -36,6 +36,8 @@ import android.os.Looper;
 import android.os.ParcelFileDescriptor;
 import android.os.RemoteException;
 import android.preference.PreferenceManager;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -128,6 +130,19 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
         super.onCreate(savedInstanceState);
         prefs = new Prefs(this);
         getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new LoriePreferenceFragment(null)).commit();
+
+        // Handle system window insets to prevent content from being blocked by navigation bar
+        findViewById(android.R.id.content).post(() -> {
+            ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content), (v, insets) -> {
+                v.setPadding(
+                    insets.getSystemWindowInsetLeft(),
+                    insets.getSystemWindowInsetTop(),
+                    insets.getSystemWindowInsetRight(),
+                    insets.getSystemWindowInsetBottom()
+                );
+                return WindowInsetsCompat.CONSUMED;
+            });
+        });
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
