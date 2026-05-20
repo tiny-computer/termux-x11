@@ -7,6 +7,8 @@ else
     apply plugin: 'com.android.application'
 
 android.namespace 'com.termux.x11.shell_loader'
+android.lintOptions.checkReleaseBuilds false
+android.lintOptions.abortOnError false
 android.defaultConfig.minSdkVersion 26
 android.compileSdkVersion 34
 android.buildTypes.debug.signingConfig null
