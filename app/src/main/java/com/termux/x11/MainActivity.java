@@ -27,6 +27,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
+import android.window.OnBackInvokedDispatcher;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -177,6 +178,21 @@ public class MainActivity extends AppCompatActivity {
         View lorieParent = (View) lorieView.getParent();
 
         mInputHandler = new TouchInputHandler(this, new InputEventSender(lorieView));
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            getOnBackInvokedDispatcher().registerOnBackInvokedCallback(
+                OnBackInvokedDispatcher.PRIORITY_DEFAULT,
+                () -> {
+                    if (mInputHandler != null) {
+                        KeyEvent down = new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK);
+                        KeyEvent up = new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK);
+                        mInputHandler.sendKeyEvent(down);
+                        mInputHandler.sendKeyEvent(up);
+                    }
+                }
+            );
+        }
+
         mLorieKeyListener = (v, k, e) -> {
             InputDevice dev = e.getDevice();
             boolean result = mInputHandler.sendKeyEvent(e);
