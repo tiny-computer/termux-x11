@@ -30,7 +30,7 @@ import java.net.URL;
 @Keep @SuppressLint({"StaticFieldLeak", "UnsafeDynamicallyLoadedCode"})
 public class CmdEntryPoint extends ICmdEntryInterface.Stub {
     public static final String ACTION_START = "com.termux.x11.CmdEntryPoint.ACTION_START";
-    static final Handler handler;
+    static Handler handler;
     public static Context ctx;
     private final Intent intent = createIntent();
 
@@ -41,6 +41,7 @@ public class CmdEntryPoint extends ICmdEntryInterface.Stub {
      */
     public static void main(String[] args) {
         android.util.Log.i("CmdEntryPoint", "commit " + BuildConfig.COMMIT);
+        handler = new Handler(Looper.myLooper());
         handler.post(() -> new CmdEntryPoint(args));
         Looper.loop();
     }
