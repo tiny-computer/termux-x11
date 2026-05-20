@@ -30,7 +30,11 @@ public class CmdEntryPointService extends Service {
         String[] vals = intent.getStringArrayExtra(EXTRA_ENV_VALUES);
         if (keys != null && vals != null) {
             for (int i = 0; i < keys.length && i < vals.length; i++) {
-                Os.setenv(keys[i], vals[i], true);
+                try {
+                    Os.setenv(keys[i], vals[i], true);
+                } catch (android.system.ErrnoException ignored) {
+                    // Environment variable may already be set; not critical
+                }
             }
         }
 
