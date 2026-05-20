@@ -176,10 +176,14 @@ public class CmdEntryPoint extends ICmdEntryInterface.Stub {
 
     static {
         try {
-            if (Looper.getMainLooper() == null)
-                Looper.prepareMainLooper();
+            if (Looper.myLooper() == null) {
+                if (Looper.getMainLooper() == null)
+                    Looper.prepareMainLooper();
+                else
+                    Looper.prepare();
+            }
         } catch (Exception e) {
-            Log.e("CmdEntryPoint", "Something went wrong when preparing MainLooper", e);
+            Log.e("CmdEntryPoint", "Something went wrong when preparing Looper", e);
         }
         handler = new Handler();
         ctx = createContext();
