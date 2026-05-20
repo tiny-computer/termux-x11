@@ -132,16 +132,14 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
         getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new LoriePreferenceFragment(null)).commit();
 
         // Handle system window insets to prevent content from being blocked by navigation bar
-        findViewById(android.R.id.content).post(() -> {
-            ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content), (v, insets) -> {
-                v.setPadding(
-                    insets.getSystemWindowInsetLeft(),
-                    insets.getSystemWindowInsetTop(),
-                    insets.getSystemWindowInsetRight(),
-                    insets.getSystemWindowInsetBottom()
-                );
-                return WindowInsetsCompat.CONSUMED;
-            });
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content), (v, insets) -> {
+            v.setPadding(
+                insets.getInsets(WindowInsetsCompat.Type.systemBars()).left,
+                insets.getInsets(WindowInsetsCompat.Type.systemBars()).top,
+                insets.getInsets(WindowInsetsCompat.Type.systemBars()).right,
+                insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom
+            );
+            return WindowInsetsCompat.CONSUMED;
         });
 
         ActionBar actionBar = getSupportActionBar();
