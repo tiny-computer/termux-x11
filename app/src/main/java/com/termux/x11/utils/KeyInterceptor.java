@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 
 import com.termux.x11.MainActivity;
+import com.termux.x11.R;
 
 import java.util.LinkedHashSet;
 
