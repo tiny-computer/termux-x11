@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="touchscreenInputModesEntries">
-        <item>Trackpad</item>
-        <item>Simulated touchscreen</item>
-        <item>Direct touch</item>
+        <item>@string/lorie_touchMode_trackpad</item>
+        <item>@string/lorie_touchMode_simulated</item>
+        <item>@string/lorie_touchMode_direct</item>
     </string-array>
     <string-array name="touchscreenInputModesValues">
         <item>1</item>
@@ -11,11 +11,11 @@
         <item>3</item>
     </string-array>
     <string-array name="transformCapturedPointerEntries">
-        <item>No</item>
-        <item>Clockwise</item>
-        <item>Counter clockwise</item>
-        <item>Upside down</item>
-        <item>Automatic (for touchpad)</item>
+        <item>@string/lorie_transformCapturedPointer_no</item>
+        <item>@string/lorie_transformCapturedPointer_cw</item>
+        <item>@string/lorie_transformCapturedPointer_cc</item>
+        <item>@string/lorie_transformCapturedPointer_ud</item>
+        <item>@string/lorie_transformCapturedPointer_at</item>
     </string-array>
     <string-array name="transformCapturedPointerValues">
         <item>no</item>
@@ -25,10 +25,10 @@
         <item>at</item>
     </string-array>
     <string-array name="displayResolutionVariants">
-        <item>native</item>
-        <item>scaled</item>
-        <item>exact</item>
-        <item>custom</item>
+        <item>@string/lorie_displayResolution_native</item>
+        <item>@string/lorie_displayResolution_scaled</item>
+        <item>@string/lorie_displayResolution_exact</item>
+        <item>@string/lorie_displayResolution_custom</item>
     </string-array>
     <string-array name="displayResolution">
         <item>320x200</item>
@@ -57,36 +57,36 @@
         <item>7680x4320</item>
     </string-array>
     <string-array name="displayFilteringVariants">
-        <item>bilinear</item>
-        <item>nearest</item>
+        <item>@string/lorie_displayFiltering_bilinear</item>
+        <item>@string/lorie_displayFiltering_nearest</item>
     </string-array>
     <string-array name="userActionsValues">
-        <item>no action</item>
-        <item>toggle soft keyboard</item>
-        <item>toggle additional key bar</item>
-        <item>open preferences</item>
-        <item>release pointer and keyboard capture</item>
-        <item>toggle fullscreen</item>
-        <item>restart activity</item>
-        <item>exit</item>
+        <item>@string/lorie_userAction_noAction</item>
+        <item>@string/lorie_userAction_toggleSoftKbd</item>
+        <item>@string/lorie_userAction_toggleAdditionalKbd</item>
+        <item>@string/lorie_userAction_openPreferences</item>
+        <item>@string/lorie_userAction_releaseCaptures</item>
+        <item>@string/lorie_userAction_toggleFullscreen</item>
+        <item>@string/lorie_userAction_restartActivity</item>
+        <item>@string/lorie_userAction_exit</item>
     </string-array>
     <string-array name="userActionsVolumeDownValues">
         <item>@array/userActionsValues</item>
-        <item>send volume down</item>
+        <item>@string/lorie_userAction_sendVolumeDown</item>
     </string-array>
     <string-array name="userActionsVolumeUpValues">
         <item>@array/userActionsValues</item>
-        <item>send volume up</item>
+        <item>@string/lorie_userAction_sendVolumeUp</item>
     </string-array>
     <string-array name="userActionsMediaKeyValues">
         <item>@array/userActionsValues</item>
-        <item>send media action</item>
+        <item>@string/lorie_userAction_sendMediaAction</item>
     </string-array>
     <string-array name="forceOrientationVariants">
-        <item>auto</item>
-        <item>portrait</item>
-        <item>landscape</item>
-        <item>reverse portrait</item>
-        <item>reverse landscape</item>
+        <item>@string/lorie_orientation_auto</item>
+        <item>@string/lorie_orientation_portrait</item>
+        <item>@string/lorie_orientation_landscape</item>
+        <item>@string/lorie_orientation_reversePortrait</item>
+        <item>@string/lorie_orientation_reverseLandscape</item>
     </string-array>
 </resources>

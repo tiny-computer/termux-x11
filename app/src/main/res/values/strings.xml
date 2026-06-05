@@ -115,4 +115,59 @@ E.g. <b>META</b> for <i>META key</i>, \n
     <string name="lorie_pref_summary_requiresExactOrCustom">Requires "display resolution mode" to be "exact" or "custom"</string>
     <string name="lorie_pref_summary_requiresIntercepting">Requires intercepting system shortcuts with Dex mode or with Accessibility service</string>
     <string name="lorie_pref_summary_requiresTrackpadAndNative">Requires "Touchscreen input mode" to be "Trackpad" and "Display resolution mode" to be not "native"</string>
+
+    <!-- Touchscreen input mode entries -->
+    <string name="lorie_touchMode_trackpad">Trackpad</string>
+    <string name="lorie_touchMode_simulated">Simulated touchscreen</string>
+    <string name="lorie_touchMode_direct">Direct touch</string>
+
+    <!-- Display resolution variants -->
+    <string name="lorie_displayResolution_native">native</string>
+    <string name="lorie_displayResolution_scaled">scaled</string>
+    <string name="lorie_displayResolution_exact">exact</string>
+    <string name="lorie_displayResolution_custom">custom</string>
+
+    <!-- Display filtering variants -->
+    <string name="lorie_displayFiltering_bilinear">bilinear</string>
+    <string name="lorie_displayFiltering_nearest">nearest</string>
+
+    <!-- Transform captured pointer entries -->
+    <string name="lorie_transformCapturedPointer_no">No</string>
+    <string name="lorie_transformCapturedPointer_cw">Clockwise</string>
+    <string name="lorie_transformCapturedPointer_cc">Counter clockwise</string>
+    <string name="lorie_transformCapturedPointer_ud">Upside down</string>
+    <string name="lorie_transformCapturedPointer_at">Automatic (for touchpad)</string>
+
+    <!-- User action values -->
+    <string name="lorie_userAction_noAction">no action</string>
+    <string name="lorie_userAction_noActionWithText">no action (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">toggle soft keyboard</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">toggle additional key bar</string>
+    <string name="lorie_userAction_openPreferences">open preferences</string>
+    <string name="lorie_userAction_releaseCaptures">release pointer and keyboard capture</string>
+    <string name="lorie_userAction_toggleFullscreen">toggle fullscreen</string>
+    <string name="lorie_userAction_restartActivity">restart activity</string>
+    <string name="lorie_userAction_exit">exit</string>
+    <string name="lorie_userAction_sendVolumeDown">send volume down</string>
+    <string name="lorie_userAction_sendVolumeUp">send volume up</string>
+    <string name="lorie_userAction_sendMediaAction">send media action</string>
+    <string name="lorie_userAction_androidVolumeControl">android volume control</string>
+    <string name="lorie_userAction_androidMediaControl">android media control</string>
+
+    <!-- Force orientation variants -->
+    <string name="lorie_orientation_auto">auto</string>
+    <string name="lorie_orientation_portrait">portrait</string>
+    <string name="lorie_orientation_landscape">landscape</string>
+    <string name="lorie_orientation_reversePortrait">reverse portrait</string>
+    <string name="lorie_orientation_reverseLandscape">reverse landscape</string>
+
+    <!-- Toast and dialog messages -->
+    <string name="lorie_toast_copied_to_clipboard">Copied to clipboard</string>
+    <string name="lorie_toast_wrong_resolution_format">Wrong resolution format</string>
+    <string name="lorie_dialog_permission_denied_title">Permission denied</string>
+    <string name="lorie_dialog_permission_denied_message">Android requires WRITE_SECURE_SETTINGS permission to start accessibility service automatically.\nPlease, launch this command using ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Failed to load native library. Did you install the right apk? Try the universal one.</string>
+
+    <!-- Accessibility service label -->
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
 </resources>

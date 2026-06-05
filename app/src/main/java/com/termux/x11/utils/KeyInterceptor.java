@@ -43,11 +43,9 @@ public class KeyInterceptor extends AccessibilityService {
             launchedAutomatically = true;
         } catch (SecurityException e) {
             new AlertDialog.Builder(ctx)
-                    .setTitle("Permission denied")
-                    .setMessage("Android requires WRITE_SECURE_SETTINGS permission to start accessibility service automatically.\n" +
-                            "Please, launch this command using ADB:\n" +
-                            "adb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS")
-                    .setNegativeButton("OK", null)
+                    .setTitle(R.string.lorie_dialog_permission_denied_title)
+                    .setMessage(R.string.lorie_dialog_permission_denied_message)
+                    .setNegativeButton(android.R.string.ok, null)
                     .create()
                     .show();
 

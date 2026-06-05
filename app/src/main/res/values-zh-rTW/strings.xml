@@ -115,4 +115,59 @@
     <string name="lorie_pref_summary_requiresExactOrCustom">需要將「顯示解析度模式」設定為「exact」或「custom」</string>
     <string name="lorie_pref_summary_requiresIntercepting">需要使用 Dex 模式或無障礙服務攔截系統快速鍵</string>
     <string name="lorie_pref_summary_requiresTrackpadAndNative">需要將「觸控螢幕輸入模式」設定為「Trackpad」且「顯示解析度模式」不為「native」</string>
+
+    <!-- 觸控螢幕輸入模式項目 -->
+    <string name="lorie_touchMode_trackpad">觸控板</string>
+    <string name="lorie_touchMode_simulated">模擬觸控螢幕</string>
+    <string name="lorie_touchMode_direct">直接觸控</string>
+
+    <!-- 顯示解析度選項 -->
+    <string name="lorie_displayResolution_native">原生</string>
+    <string name="lorie_displayResolution_scaled">縮放</string>
+    <string name="lorie_displayResolution_exact">精確</string>
+    <string name="lorie_displayResolution_custom">自訂</string>
+
+    <!-- 顯示過濾選項 -->
+    <string name="lorie_displayFiltering_bilinear">雙線性</string>
+    <string name="lorie_displayFiltering_nearest">鄰近</string>
+
+    <!-- 指標變換選項 -->
+    <string name="lorie_transformCapturedPointer_no">否</string>
+    <string name="lorie_transformCapturedPointer_cw">順時針</string>
+    <string name="lorie_transformCapturedPointer_cc">逆時針</string>
+    <string name="lorie_transformCapturedPointer_ud">上下顛倒</string>
+    <string name="lorie_transformCapturedPointer_at">自動（觸控板）</string>
+
+    <!-- 使用者操作選項 -->
+    <string name="lorie_userAction_noAction">無操作</string>
+    <string name="lorie_userAction_noActionWithText">無操作（%1$s）</string>
+    <string name="lorie_userAction_toggleSoftKbd">切換軟鍵盤</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">切換小鍵盤</string>
+    <string name="lorie_userAction_openPreferences">開啟偏好設定</string>
+    <string name="lorie_userAction_releaseCaptures">釋放指標和鍵盤擷取</string>
+    <string name="lorie_userAction_toggleFullscreen">切換全螢幕</string>
+    <string name="lorie_userAction_restartActivity">重新啟動活動</string>
+    <string name="lorie_userAction_exit">離開</string>
+    <string name="lorie_userAction_sendVolumeDown">傳送音量減少</string>
+    <string name="lorie_userAction_sendVolumeUp">傳送音量增加</string>
+    <string name="lorie_userAction_sendMediaAction">傳送媒體操作</string>
+    <string name="lorie_userAction_androidVolumeControl">Android 音量控制</string>
+    <string name="lorie_userAction_androidMediaControl">Android 媒體控制</string>
+
+    <!-- 螢幕方向選項 -->
+    <string name="lorie_orientation_auto">自動</string>
+    <string name="lorie_orientation_portrait">縱向</string>
+    <string name="lorie_orientation_landscape">橫向</string>
+    <string name="lorie_orientation_reversePortrait">反向縱向</string>
+    <string name="lorie_orientation_reverseLandscape">反向橫向</string>
+
+    <!-- 提示和對話框訊息 -->
+    <string name="lorie_toast_copied_to_clipboard">已複製到剪貼簿</string>
+    <string name="lorie_toast_wrong_resolution_format">解析度格式錯誤</string>
+    <string name="lorie_dialog_permission_denied_title">權限被拒絕</string>
+    <string name="lorie_dialog_permission_denied_message">Android 需要 WRITE_SECURE_SETTINGS 權限才能自動啟動無障礙服務。\n請使用 ADB 執行以下指令：\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">無法載入原生程式庫。您安裝了正確的 APK 嗎？請嘗試 universal 版本。</string>
+
+    <!-- 無障礙服務標籤 -->
+    <string name="lorie_key_interceptor_label">Termux:X11 按鍵攔截器</string>
 </resources>

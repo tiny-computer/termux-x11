@@ -386,9 +386,10 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                 return;
             ListPreference p = (ListPreference) preference;
             CharSequence[] options = p.getEntries();
+            CharSequence noAction = getString(R.string.lorie_userAction_noAction);
             for (int i=0; i<options.length; i++) {
-                if ("no action".contentEquals(options[i]))
-                    options[i] = "no action (" + text + ")";
+                if (noAction.equals(options[i]))
+                    options[i] = getString(R.string.lorie_userAction_noActionWithText, text);
             }
         }
 
@@ -409,7 +410,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                 if (ctx != null) {
                     ((ClipboardManager) ctx.getSystemService(Context.CLIPBOARD_SERVICE))
                             .setPrimaryClip(ClipData.newPlainText(p.getSummary(), p.getSummary()));
-                    Toast.makeText(ctx, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ctx, R.string.lorie_toast_copied_to_clipboard, Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -448,7 +449,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                     if (width <= 0 || height <= 0)
                         throw new NumberFormatException();
                 } catch (NumberFormatException | PatternSyntaxException ignored) {
-                    Toast.makeText(getActivity(), "Wrong resolution format", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), R.string.lorie_toast_wrong_resolution_format, Toast.LENGTH_SHORT).show();
                     return false;
                 }
             }

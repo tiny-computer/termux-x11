@@ -198,13 +198,13 @@ public class CmdEntryPoint extends ICmdEntryInterface.Stub {
                 System.loadLibrary("Xlorie");
             } catch (Exception e) {
                 Log.e("CmdEntryPoint", "Failed to dlopen " + libPath, e);
-                System.err.println("Failed to load native library. Did you install the right apk? Try the universal one.");
+                System.err.println(ctx != null ? ctx.getString(R.string.lorie_error_native_library_load) : "Failed to load native library. Did you install the right apk? Try the universal one.");
                 System.exit(134);
             }
         } else {
             // It is critical only when it is not running in Android application process
             if (MainActivity.getInstance() == null) {
-                System.err.println("Failed to acquire native library. Did you install the right apk? Try the universal one.");
+                System.err.println(ctx != null ? ctx.getString(R.string.lorie_error_native_library_load) : "Failed to acquire native library. Did you install the right apk? Try the universal one.");
                 System.exit(134);
             }
         }
