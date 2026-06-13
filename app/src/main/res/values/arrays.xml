@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- ===== Touchscreen input mode ===== -->
     <string-array name="touchscreenInputModesEntries">
         <item>@string/lorie_touchMode_trackpad</item>
         <item>@string/lorie_touchMode_simulated</item>
@@ -10,6 +11,8 @@
         <item>2</item>
         <item>3</item>
     </string-array>
+
+    <!-- ===== Transform captured pointer ===== -->
     <string-array name="transformCapturedPointerEntries">
         <item>@string/lorie_transformCapturedPointer_no</item>
         <item>@string/lorie_transformCapturedPointer_cw</item>
@@ -24,12 +27,24 @@
         <item>ud</item>
         <item>at</item>
     </string-array>
-    <string-array name="displayResolutionVariants">
+
+    <!-- ===== Display resolution mode ===== -->
+    <!-- entries (displayed to user, translatable) -->
+    <string-array name="displayResolutionVariantsEntries">
         <item>@string/lorie_displayResolution_native</item>
         <item>@string/lorie_displayResolution_scaled</item>
         <item>@string/lorie_displayResolution_exact</item>
         <item>@string/lorie_displayResolution_custom</item>
     </string-array>
+    <!-- values (stored in preferences, DO NOT translate) -->
+    <string-array name="displayResolutionVariants">
+        <item>native</item>
+        <item>scaled</item>
+        <item>exact</item>
+        <item>custom</item>
+    </string-array>
+
+    <!-- ===== Display resolution (preset sizes, values only) ===== -->
     <string-array name="displayResolution">
         <item>320x200</item>
         <item>320x240</item>
@@ -56,11 +71,22 @@
         <item>3840x2160</item>
         <item>7680x4320</item>
     </string-array>
-    <string-array name="displayFilteringVariants">
+
+    <!-- ===== Display filtering mode ===== -->
+    <!-- entries (displayed to user, translatable) -->
+    <string-array name="displayFilteringVariantsEntries">
         <item>@string/lorie_displayFiltering_bilinear</item>
         <item>@string/lorie_displayFiltering_nearest</item>
     </string-array>
-    <string-array name="userActionsValues">
+    <!-- values (stored in preferences, DO NOT translate) -->
+    <string-array name="displayFilteringVariants">
+        <item>bilinear</item>
+        <item>nearest</item>
+    </string-array>
+
+    <!-- ===== User actions ===== -->
+    <!-- entries (displayed to user, translatable) -->
+    <string-array name="userActionsValuesEntries">
         <item>@string/lorie_userAction_noAction</item>
         <item>@string/lorie_userAction_toggleSoftKbd</item>
         <item>@string/lorie_userAction_toggleAdditionalKbd</item>
@@ -70,23 +96,66 @@
         <item>@string/lorie_userAction_restartActivity</item>
         <item>@string/lorie_userAction_exit</item>
     </string-array>
-    <string-array name="userActionsVolumeDownValues">
-        <item>@array/userActionsValues</item>
+    <!-- values (stored in preferences, DO NOT translate) -->
+    <string-array name="userActionsValues">
+        <item>no action</item>
+        <item>toggle soft keyboard</item>
+        <item>toggle additional key bar</item>
+        <item>open preferences</item>
+        <item>release pointer and keyboard capture</item>
+        <item>toggle fullscreen</item>
+        <item>restart activity</item>
+        <item>exit</item>
+    </string-array>
+
+    <!-- entries (displayed to user, translatable) -->
+    <string-array name="userActionsVolumeDownEntries">
+        <item>@array/userActionsValuesEntries</item>
         <item>@string/lorie_userAction_sendVolumeDown</item>
     </string-array>
-    <string-array name="userActionsVolumeUpValues">
+    <!-- values (stored in preferences, DO NOT translate) -->
+    <string-array name="userActionsVolumeDownValues">
         <item>@array/userActionsValues</item>
+        <item>send volume down</item>
+    </string-array>
+
+    <!-- entries (displayed to user, translatable) -->
+    <string-array name="userActionsVolumeUpEntries">
+        <item>@array/userActionsValuesEntries</item>
         <item>@string/lorie_userAction_sendVolumeUp</item>
     </string-array>
-    <string-array name="userActionsMediaKeyValues">
+    <!-- values (stored in preferences, DO NOT translate) -->
+    <string-array name="userActionsVolumeUpValues">
         <item>@array/userActionsValues</item>
+        <item>send volume up</item>
+    </string-array>
+
+    <!-- entries (displayed to user, translatable) -->
+    <string-array name="userActionsMediaKeyEntries">
+        <item>@array/userActionsValuesEntries</item>
         <item>@string/lorie_userAction_sendMediaAction</item>
     </string-array>
-    <string-array name="forceOrientationVariants">
+    <!-- values (stored in preferences, DO NOT translate) -->
+    <string-array name="userActionsMediaKeyValues">
+        <item>@array/userActionsValues</item>
+        <item>send media action</item>
+    </string-array>
+
+    <!-- ===== Force orientation ===== -->
+    <!-- entries (displayed to user, translatable) -->
+    <string-array name="forceOrientationVariantsEntries">
         <item>@string/lorie_orientation_auto</item>
         <item>@string/lorie_orientation_portrait</item>
         <item>@string/lorie_orientation_landscape</item>
         <item>@string/lorie_orientation_reversePortrait</item>
         <item>@string/lorie_orientation_reverseLandscape</item>
+    </string-array>
+    <!-- values (stored in preferences, DO NOT translate) -->
+    <string-array name="forceOrientationVariants">
+        <item>auto</item>
+        <item>portrait</item>
+        <item>landscape</item>
+        <item>reverse portrait</item>
+        <item>reverse landscape</item>
     </string-array>
 </resources>
