@@ -67,6 +67,8 @@ VD: <b>META</b> cho <i>phím META</i>, \n
     <string name="lorie_pref_transformCapturedPointer">Biến đổi chuyển động của con trỏ bị bắt giữ</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Hệ số tốc độ con trỏ bị bắt giữ, %</string>
     <string name="lorie_pref_tapToMove">Bật chạm-để-di-chuyển cho bàn di chuột</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Bỏ qua sự kiện nhập từ gamepad</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Ngăn sự kiện gamepad và joystick được chuyển tiếp đến máy chủ X</string>
 
     <string name="lorie_pref_showAdditionalKbd">Hiển thị bàn phím bổ sung</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Hiển thị bàn phím với các phím bổ sung.</string>

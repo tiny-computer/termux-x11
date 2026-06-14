@@ -67,6 +67,8 @@
     <string name="lorie_pref_transformCapturedPointer">تحويل حركات المؤشر الملتقطة</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">عامل سرعة المؤشر الملتقط، %</string>
     <string name="lorie_pref_tapToMove">تمكين النقر للتحريك للوحات اللمس</string>
+    <string name="lorie_pref_ignoreGamepadEvents">تجاهل أحداث إدخال ذراع التحكم</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">منع إعادة توجيه أحداث ذراع التحكم وعصا التحكم إلى خادم X</string>
 
     <string name="lorie_pref_showAdditionalKbd">إظهار لوحة مفاتيح إضافية</string>
     <string name="lorie_pref_showAdditionalKbd_summary">إظهار لوحة مفاتيح بمفاتيح إضافية.</string>

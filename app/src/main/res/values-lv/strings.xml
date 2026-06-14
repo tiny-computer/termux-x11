@@ -67,6 +67,8 @@ Piem., <b>META</b> priekš <i>META taustiņa</i>, \n
     <string name="lorie_pref_transformCapturedPointer">Pārveidot tvertā rādītāja kustības</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Tvertā rādītāja ātruma koeficients, %</string>
     <string name="lorie_pref_tapToMove">Iespējot pieskārienu-pārvietošanai skārienpaliktņiem</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignorēt spēļu paneļa ievades notikumus</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Novērst spēļu paneļa un kursorsviras notikumu pārsūtīšanu uz X serveri</string>
 
     <string name="lorie_pref_showAdditionalKbd">Rādīt papildu tastatūru</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Rādīt tastatūru ar papildu taustiņiem.</string>

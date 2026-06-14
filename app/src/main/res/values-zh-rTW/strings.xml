@@ -67,6 +67,8 @@
     <string name="lorie_pref_transformCapturedPointer">轉換擷取的指標移動</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">擷取的指標速度因子, %</string>
     <string name="lorie_pref_tapToMove">為觸控板啟用點擊移動</string>
+    <string name="lorie_pref_ignoreGamepadEvents">忽略遊戲手掣輸入事件</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">阻止遊戲手掣和搖桿事件轉發到 X 伺服器</string>
 
     <string name="lorie_pref_showAdditionalKbd">顯示小鍵盤</string>
     <string name="lorie_pref_showAdditionalKbd_summary">顯示附有小按鍵的鍵盤。</string>

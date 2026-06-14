@@ -67,6 +67,8 @@ F.eks. <b>META</b> for <i>META-tast</i>, \n
     <string name="lorie_pref_transformCapturedPointer">Transformer fangede pekerbevegelser</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Fanget pekerhastighetsfaktor, %</string>
     <string name="lorie_pref_tapToMove">Aktiver trykk-for-å-flytte for berøringsplater</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignorer inndatahendelser fra spillkontroller</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Hindre at hendelser fra spillkontroller og joystick videresendes til X-server</string>
 
     <string name="lorie_pref_showAdditionalKbd">Vis ekstra tastatur</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Vis tastatur med ekstra taster.</string>

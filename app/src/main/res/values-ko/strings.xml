@@ -67,6 +67,8 @@
     <string name="lorie_pref_transformCapturedPointer">캡처된 포인터 움직임 변환</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">캡처된 포인터 속도 계수, %</string>
     <string name="lorie_pref_tapToMove">터치패드 탭-투-무브 활성화</string>
+    <string name="lorie_pref_ignoreGamepadEvents">게임패드 입력 이벤트 무시</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">게임패드 및 조이스틱 이벤트가 X 서버로 전달되지 않도록 방지</string>
 
     <string name="lorie_pref_showAdditionalKbd">추가 키보드 표시</string>
     <string name="lorie_pref_showAdditionalKbd_summary">추가 키가 있는 키보드를 표시합니다.</string>

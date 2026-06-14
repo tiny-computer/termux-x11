@@ -67,6 +67,8 @@ Cth. <b>META</b> untuk <i>kunci META</i>, \n
     <string name="lorie_pref_transformCapturedPointer">Ubah gerakan penuding yang ditangkap</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Faktor kelajuan penuding yang ditangkap, %</string>
     <string name="lorie_pref_tapToMove">Dayakan ketik-untuk-gerak untuk pad sentuh</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Abaikan peristiwa input gamepad</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Halang peristiwa gamepad dan kayu ria daripada dihantar ke pelayan X</string>
 
     <string name="lorie_pref_showAdditionalKbd">Tunjukkan papan kekunci tambahan</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Tunjukkan papan kekunci dengan kekunci tambahan.</string>

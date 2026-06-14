@@ -67,6 +67,8 @@
     <string name="lorie_pref_transformCapturedPointer">Трансформиши покрете ухваћеног показивача</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Фактор брзине ухваћеног показивача, %</string>
     <string name="lorie_pref_tapToMove">Омогући додирни-за-померање за додирне табле</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignoriši ulazne događaje gejmpada</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Spreči prosleđivanje događaja gejmpada i džojstika X serveru</string>
 
     <string name="lorie_pref_showAdditionalKbd">Прикажи додатну тастатуру</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Прикажи тастатуру са додатним тастерима.</string>

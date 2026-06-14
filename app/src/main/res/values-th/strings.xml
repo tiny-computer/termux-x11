@@ -67,6 +67,8 @@
     <string name="lorie_pref_transformCapturedPointer">แปลงการเคลื่อนที่ของตัวชี้ที่ถูกจับ</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">ปัจจัยความเร็วของตัวชี้ที่ถูกจับ, %</string>
     <string name="lorie_pref_tapToMove">เปิดใช้งานแตะเพื่อย้ายสำหรับทัชแพด</string>
+    <string name="lorie_pref_ignoreGamepadEvents">ไม่สนใจเหตุการณ์อินพุตของเกมแพด</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">ป้องกันไม่ให้เหตุการณ์เกมแพดและจอยสติ๊กถูกส่งต่อไปยังเซิร์ฟเวอร์ X</string>
 
     <string name="lorie_pref_showAdditionalKbd">แสดงแป้นพิมพ์เพิ่มเติม</string>
     <string name="lorie_pref_showAdditionalKbd_summary">แสดงแป้นพิมพ์พร้อมปุ่มเพิ่มเติม</string>

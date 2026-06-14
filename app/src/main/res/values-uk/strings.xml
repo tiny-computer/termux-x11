@@ -67,6 +67,8 @@
     <string name="lorie_pref_transformCapturedPointer">Перетворювати рухи захопленого вказівника</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Коефіцієнт швидкості захопленого вказівника, %</string>
     <string name="lorie_pref_tapToMove">Увімкнути дотик-для-переміщення для тачпадів</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ігнорувати події введення з геймпада</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Запобігти пересиланню подій геймпада та джойстика на X-сервер</string>
 
     <string name="lorie_pref_showAdditionalKbd">Показати додаткову клавіатуру</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Показати клавіатуру з додатковими клавішами.</string>

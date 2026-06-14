@@ -67,6 +67,8 @@
     <string name="lorie_pref_transformCapturedPointer">キャプチャされたポインタの動きを変換</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">キャプチャされたポインタの速度係数, %</string>
     <string name="lorie_pref_tapToMove">タッチパッドのタップ移動を有効化</string>
+    <string name="lorie_pref_ignoreGamepadEvents">ゲームパッド入力イベントを無視</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">ゲームパッドとジョイスティックのイベントがXサーバーに転送されないようにする</string>
 
     <string name="lorie_pref_showAdditionalKbd">追加キーボードを表示</string>
     <string name="lorie_pref_showAdditionalKbd_summary">追加キー付きキーボードを表示します。</string>

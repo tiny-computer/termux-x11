@@ -67,6 +67,8 @@ Z.B. <b>META</b> für <i>META-Taste</i>, \n
     <string name="lorie_pref_transformCapturedPointer">Erfasste Zeigerbewegungen transformieren</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Geschwindigkeitsfaktor für erfassten Zeiger, %</string>
     <string name="lorie_pref_tapToMove">Tippen-zum-Bewegen für Touchpads aktivieren</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Gamepad-Eingabeereignisse ignorieren</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Verhindern, dass Gamepad- und Joystick-Ereignisse an den X-Server weitergeleitet werden</string>
 
     <string name="lorie_pref_showAdditionalKbd">Zusätzliche Tastatur anzeigen</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Tastatur mit zusätzlichen Tasten anzeigen.</string>

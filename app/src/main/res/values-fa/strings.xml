@@ -67,6 +67,8 @@
     <string name="lorie_pref_transformCapturedPointer">تبدیل حرکات اشاره‌گر ضبط شده</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">ضریب سرعت اشاره‌گر ضبط شده، %</string>
     <string name="lorie_pref_tapToMove">فعال کردن ضربه-برای-حرکت برای صفحات لمسی</string>
+    <string name="lorie_pref_ignoreGamepadEvents">نادیده گرفتن رویدادهای ورودی دسته بازی</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">جلوگیری از ارسال رویدادهای دسته بازی و جویاستیک به سرور X</string>
 
     <string name="lorie_pref_showAdditionalKbd">نمایش صفحه‌کلید اضافی</string>
     <string name="lorie_pref_showAdditionalKbd_summary">نمایش صفحه‌کلید با کلیدهای اضافی.</string>

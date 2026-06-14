@@ -67,6 +67,8 @@
     <string name="lorie_pref_transformCapturedPointer">转换捕获的指针移动</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">捕获的指针速度因子, %</string>
     <string name="lorie_pref_tapToMove">为触摸板启用点击移动</string>
+    <string name="lorie_pref_ignoreGamepadEvents">忽略游戏手柄输入事件</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">阻止游戏手柄和摇杆事件转发到 X 服务器</string>
 
     <string name="lorie_pref_showAdditionalKbd">显示小键盘</string>
     <string name="lorie_pref_showAdditionalKbd_summary">显示带有小按键的键盘。</string>

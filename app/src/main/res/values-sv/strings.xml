@@ -67,6 +67,8 @@ T.ex. <b>META</b> för <i>META-tangent</i>, \n
     <string name="lorie_pref_transformCapturedPointer">Transformera fångade pekarrörelser</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Hastighetsfaktor för fångad pekare, %</string>
     <string name="lorie_pref_tapToMove">Aktivera tryck-för-att-flytta för pekplattor</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignorera inmatningshändelser från gamepad</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Förhindra att gamepad- och joystickhändelser vidarebefordras till X-servern</string>
 
     <string name="lorie_pref_showAdditionalKbd">Visa extra tangentbord</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Visa tangentbord med extra tangenter.</string>

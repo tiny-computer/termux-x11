@@ -67,6 +67,8 @@ Bijv. <b>META</b> voor <i>META-toets</i>, \n
     <string name="lorie_pref_transformCapturedPointer">Bewegingen van vastgelegde aanwijzer transformeren</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Snelheidsfactor van vastgelegde aanwijzer, %</string>
     <string name="lorie_pref_tapToMove">Tik-om-te-verplaatsen inschakelen voor touchpads</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Gamepad-invoergebeurtenissen negeren</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Voorkomen dat gamepad- en joystickgebeurtenissen worden doorgestuurd naar de X-server</string>
 
     <string name="lorie_pref_showAdditionalKbd">Extra toetsenbord weergeven</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Toetsenbord met extra toetsen weergeven.</string>

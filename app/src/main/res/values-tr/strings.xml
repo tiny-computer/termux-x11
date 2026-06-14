@@ -67,6 +67,8 @@
     <string name="lorie_pref_transformCapturedPointer">Yakalanan işaretçi hareketlerini dönüştür</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Yakalanan işaretçi hız faktörü, %</string>
     <string name="lorie_pref_tapToMove">Dokunmatik yüzeyler için dokun-ve-taşıyı etkinleştir</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Gamepad giriş olaylarını yok say</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Gamepad ve joystick olaylarının X sunucusuna iletilmesini engelle</string>
 
     <string name="lorie_pref_showAdditionalKbd">Ek klavyeyi göster</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Ek tuşlarla klavyeyi göster.</string>

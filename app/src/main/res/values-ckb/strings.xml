@@ -67,6 +67,8 @@
     <string name="lorie_pref_transformCapturedPointer">گۆڕینی جوڵەکانی نیشاندەری گیراو</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">فاکتەری خێرایی نیشاندەری گیراو، %</string>
     <string name="lorie_pref_tapToMove">چالاککردنی پەنجەپێکردن بۆ جوڵاندن بۆ پەنجەڕێکان</string>
+    <string name="lorie_pref_ignoreGamepadEvents">پشتگوێخستنی ڕووداوەکانی گەیمپاد</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">ڕێگریکردن لە ناردنی ڕووداوەکانی گەیمپاد و جۆیستیک بۆ ڕاژەکاری X</string>
 
     <string name="lorie_pref_showAdditionalKbd">پیشاندانی تەختەکلیلی زیادە</string>
     <string name="lorie_pref_showAdditionalKbd_summary">پیشاندانی تەختەکلیل بە کلیلی زیادەوە.</string>

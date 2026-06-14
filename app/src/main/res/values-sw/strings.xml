@@ -67,6 +67,8 @@ Mf. <b>META</b> kwa <i>kitufe cha META</i>, \n
     <string name="lorie_pref_transformCapturedPointer">Badilisha mienendo ya kielekezi kilichokamatwa</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Kiwango cha kasi ya kielekezi kilichokamatwa, %</string>
     <string name="lorie_pref_tapToMove">Wezesha gusa-kusogeza kwa viguso</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Puuza matukio ya kuingiza ya gamepad</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Zuia matukio ya gamepad na joystick kusambazwa kwa seva ya X</string>
 
     <string name="lorie_pref_showAdditionalKbd">Onyesha kibodi ya ziada</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Onyesha kibodi yenye vitufe vya ziada.</string>

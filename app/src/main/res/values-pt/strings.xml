@@ -67,6 +67,8 @@ Ex. <b>META</b> para <i>tecla META</i>, \n
     <string name="lorie_pref_transformCapturedPointer">Transformar movimentos do ponteiro capturado</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Fator de velocidade do ponteiro capturado, %</string>
     <string name="lorie_pref_tapToMove">Ativar tocar-para-mover para touchpads</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignorar eventos de entrada do gamepad</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Impedir que eventos do gamepad e joystick sejam encaminhados para o servidor X</string>
 
     <string name="lorie_pref_showAdditionalKbd">Mostrar teclado adicional</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Mostrar teclado com teclas adicionais.</string>

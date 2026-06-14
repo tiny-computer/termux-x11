@@ -67,6 +67,8 @@ Np. <b>META</b> dla <i>klawisza META</i>, \n
     <string name="lorie_pref_transformCapturedPointer">Przekształć ruchy przechwyconego wskaźnika</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Współczynnik prędkości przechwyconego wskaźnika, %</string>
     <string name="lorie_pref_tapToMove">Włącz dotknij-aby-przesunąć dla touchpadów</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignoruj zdarzenia wejściowe gamepada</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Zapobiegaj przekazywaniu zdarzeń gamepada i joysticka do serwera X</string>
 
     <string name="lorie_pref_showAdditionalKbd">Pokaż dodatkową klawiaturę</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Pokaż klawiaturę z dodatkowymi klawiszami.</string>

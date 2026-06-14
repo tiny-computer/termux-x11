@@ -67,6 +67,8 @@ Mis. <b>META</b> untuk <i>tombol META</i>, \n
     <string name="lorie_pref_transformCapturedPointer">Transformasikan gerakan penunjuk yang ditangkap</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Faktor kecepatan penunjuk yang ditangkap, %</string>
     <string name="lorie_pref_tapToMove">Aktifkan ketuk-untuk-bergerak untuk touchpad</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Abaikan event input gamepad</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Cegah event gamepad dan joystick diteruskan ke server X</string>
 
     <string name="lorie_pref_showAdditionalKbd">Tampilkan papan ketik tambahan</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Tampilkan papan ketik dengan tombol tambahan.</string>

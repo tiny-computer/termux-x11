@@ -67,6 +67,8 @@
     <string name="lorie_pref_transformCapturedPointer">ক্যাপচার করা পয়েন্টার মুভমেন্ট রূপান্তর করুন</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">ক্যাপচার করা পয়েন্টারের গতি ফ্যাক্টর, %</string>
     <string name="lorie_pref_tapToMove">টাচপ্যাডের জন্য ট্যাপ-টু-মুভ সক্ষম করুন</string>
+    <string name="lorie_pref_ignoreGamepadEvents">গেমপ্যাড ইনপুট ইভেন্ট উপেক্ষা করুন</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">গেমপ্যাড এবং জয়স্টিক ইভেন্টগুলি X সার্ভারে ফরওয়ার্ড হওয়া থেকে বিরত রাখুন</string>
 
     <string name="lorie_pref_showAdditionalKbd">অতিরিক্ত কীবোর্ড দেখান</string>
     <string name="lorie_pref_showAdditionalKbd_summary">অতিরিক্ত কী সহ কীবোর্ড দেখান।</string>

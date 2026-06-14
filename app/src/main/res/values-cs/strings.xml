@@ -67,6 +67,8 @@ Např. <b>META</b> pro <i>klávesu META</i>, \n
     <string name="lorie_pref_transformCapturedPointer">Transformovat zachycené pohyby ukazatele</string>
     <string name="lorie_pref_capturedPointerSpeedFactor">Faktor rychlosti zachyceného ukazatele, %</string>
     <string name="lorie_pref_tapToMove">Povolit klepnutí pro přesun pro touchpady</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignorovat vstupní události gamepadu</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Zabránit předávání událostí gamepadu a joysticku na X server</string>
 
     <string name="lorie_pref_showAdditionalKbd">Zobrazit další klávesnici</string>
     <string name="lorie_pref_showAdditionalKbd_summary">Zobrazit klávesnici s dalšími klávesami.</string>
